@@ -27,8 +27,10 @@ const Item = (props) => {
 const Counter = (props) => {
     const [quantity, setQuantity ] = useState(0);
     const incrementQuantity = () => {
-        const step = props.name === "Apples" ? 2 : 1;
-        setQuantity(prevQuantity => prevQuantity + step);
+        setQuantity(prevQuantity => prevQuantity + 1)
+        if(props.name == "Apples"){
+            setQuantity(prevQuantity => prevQuantity + 1)
+        }
     }
 
     const decrementQuantity = () => {
